@@ -3,9 +3,8 @@
 
 # In[ ]:
 
+import numpy as np
 
-from numpy import random
-
-def initial_params(scale, dense, rnd = random.RandomState(99)):
-    return [(scale * rnd.randn(m, n), scale * rnd.randn(n)) for m, n in zip(dense[:-1], dense[1:])]
+def initial_params(scale, dense, rnd = np.random.RandomState(99)):
+    return [(scale * rnd.randn(m, n), np.zeros(n)) for m, n in zip(dense[:-1], dense[1:])]
 
