@@ -46,7 +46,7 @@ batches = data_stream()
 #@jit
 def update(params, x, y):
     grads = backprop(params, x, y)
-    return [(w - step_size * dw, b - step_size * db)             for (w, b), (dw, db) in zip(params, grads)]
+    return [(w - step_size * dw, b - step_size * db) for (w, b), (dw, db) in zip(params, grads)]
 
 
 params = initial_params(param_scale, layer_sizes)
