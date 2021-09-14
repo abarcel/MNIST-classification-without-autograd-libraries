@@ -17,12 +17,11 @@ from src.one_hot import one_hot
 from src.net import *
 from src.backpropagation import backprop
 
-if __name__ == "__main__":
-    layer_sizes = [784, 1024, 1024, 10]
-    param_scale = 0.1
-    step_size = 0.05
-    num_epochs = 10
-    batch_size = 128
+layer_sizes = [784, 1024, 1024, 10]
+param_scale = 0.1
+step_size = 0.05
+num_epochs = 10
+batch_size = 128
 
 train = pd.read_csv('digit_recognizer/train.csv')
 x_test = pd.read_csv('digit_recognizer/test.csv')
