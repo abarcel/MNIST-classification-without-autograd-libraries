@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 import numpy as np
 
 def initial_params(scale, dense, rnd = np.random.RandomState(99)):
